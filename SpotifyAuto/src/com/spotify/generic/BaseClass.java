@@ -24,6 +24,7 @@ public void openBrowser() throws IOException {
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	String url = f.readDataFromProperty("url");
 	driver.get(url);
+	System.out.println("fgh");
 }
 @BeforeMethod
 public void login() throws IOException {
@@ -31,6 +32,7 @@ public void login() throws IOException {
 	String un = f.readDataFromProperty("un");
 	String pwd = f.readDataFromProperty("pwd");
 	l.login(un, pwd);
+	
 }
 @AfterMethod
  public void logout() {
